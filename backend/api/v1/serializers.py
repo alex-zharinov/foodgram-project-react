@@ -1,6 +1,4 @@
-import base64
-
-from django.core.files.base import ContentFile
+from api.utils.custom_fields import Base64ImageField
 from django.db import transaction
 from django.db.models import F
 from django.shortcuts import get_object_or_404
@@ -10,16 +8,6 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.fields import IntegerField, SerializerMethodField
 from users.models import Subscribe
 from users.serializers import CustomUserSerializer
-
-
-class Base64ImageField(serializers.ImageField):
-    def to_internal_value(self, data):
-        if isinstance(data, str) and data.startswith('data:image'):
-            format, imgstr = data.split(';base64,')
-            ext = format.split('/')[-1]
-            data = ContentFile(base64.b64decode(imgstr), name='temp.' + ext)
-
-        return super().to_internal_value(data)
 
 
 class IngredientSerializer(serializers.ModelSerializer):

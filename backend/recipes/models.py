@@ -1,3 +1,4 @@
+from colorfield.fields import ColorField
 from django.core.validators import MinValueValidator
 from django.db import models
 from users.models import User
@@ -5,7 +6,7 @@ from users.models import User
 
 class Tag(models.Model):
     name = models.CharField(max_length=200, unique=True)
-    color = models.CharField(max_length=7, null=True, unique=True)
+    color = ColorField()
     slug = models.SlugField(max_length=200, unique=True)
 
 
@@ -25,7 +26,9 @@ class Recipe(models.Model):
         'Картинка',
         upload_to='recipes/',
     )
-    cooking_time = models.IntegerField(validators=[MinValueValidator(1)],)
+    cooking_time = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(1)],
+    )
     tags = models.ManyToManyField(Tag)
     ingredients = models.ManyToManyField(
         Ingredient, through='IngredientRecipe', related_name='recipes'
