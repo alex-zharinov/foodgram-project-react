@@ -1,7 +1,7 @@
 # Учебный проект в рамках курса "Python-разработчик" от ЯндексПрактикум. Спринт 14.
-##Продуктовый помощник
+## Продуктовый помощник
 ## API-сервис для публикации отзывов на произведения, упакованный в контейнеры с помощью Docker
-![workflow](https://github.com/alex-zharinov/foodgram-project-react/.github/workflows/main.yml/badge.svg)
+![workflow](https://github.com/alex-zharinov/foodgram-project-react/actions/.github/workflows/main.yml/badge.svg)
 ---
 ## Адрес сервера:
 
