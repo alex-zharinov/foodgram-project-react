@@ -7,6 +7,10 @@
 
 http://51.250.72.240/
 
+## Superuser:
+- admin@mail.ru
+- admin
+
 ## Документация проекта:
 ```
 http://51.250.72.240/api/docs/
