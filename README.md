@@ -1,4 +1,4 @@
-### Service for Publishing Recipes
+# Service for Publishing Recipes
 [![Django-app workflow](https://github.com/alex-zharinov/service_for_publishing_recipes/actions/workflows/main.yml/badge.svg)](https://github.com/alex-zharinov/service_for_publishing_recipes/actions/workflows/main.yml)
 
 ## Онлаин-сервис для публикации рецептов
